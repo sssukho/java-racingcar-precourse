@@ -1,20 +1,22 @@
 package racingcar.model;
 
+import racingcar.enumeration.CarStatus;
+
 public class ForwardCount {
 
-    private long forwardCount;
+    private long count;
 
     public ForwardCount() {
-        this.forwardCount = 0;
+        this.count = 0;
     }
 
-    public void setForwardCountByRandomNum(int randomNum) {
-        if (randomNum >= 4 && randomNum <= 9) {
-            forwardCount += 1;
+    public void setCountByCarStatus(CarStatus status) {
+        if (status.equals(CarStatus.FORWARD)) {
+            count += 1;
         }
     }
 
-    public long getForwardCount() {
-        return forwardCount;
+    public long getCount() {
+        return count;
     }
 }
