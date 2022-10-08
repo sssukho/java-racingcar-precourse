@@ -4,6 +4,9 @@ import java.util.Objects;
 import racingcar.enumeration.CarStatus;
 
 public class Car {
+    public static final int FORWARD_START_INCLUSIVE = 4;
+    public static final int INT = 9;
+    public static final int FORWARD_END_INCLUSIVE = INT;
     private final Name name;
     private final ForwardCount forwardCount;
     private final ForwardString forwardString;
@@ -14,8 +17,8 @@ public class Car {
         this.forwardString = forwardString;
     }
 
-    public void setForwardResultByRandomNum(int randomNum) {
-        if (randomNum >= 4 && randomNum <= 9) {
+    public void setForwardResultByRandomNum(RandomNum randomNum) {
+        if (randomNum.getNum() >= FORWARD_START_INCLUSIVE && randomNum.getNum() <= FORWARD_END_INCLUSIVE) {
             forwardCount.setCountByCarStatus(CarStatus.FORWARD);
             forwardString.setCountByCarStatus(CarStatus.FORWARD);
             return;

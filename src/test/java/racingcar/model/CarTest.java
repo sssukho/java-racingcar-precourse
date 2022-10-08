@@ -25,14 +25,13 @@ class CarTest {
         Car car = new Car((Name) testCase.get(KEY_NAME), (ForwardCount) testCase.get(KEY_FORWARD_COUNT),
                 (ForwardString) testCase.get(KEY_FORWARD_STRING));
         Integer randomNum = (Integer) testCase.get(KEY_RANDOM_NUM);
-        car.setForwardResultByRandomNum(randomNum);
+        car.setForwardResultByRandomNum(new RandomNum(randomNum));
         long answerForwardCount = (long) testCase.get(KEY_ANSWER_FORWARD_COUNT);
         String answerForwardString = (String) testCase.get(KEY_ANSWER_FORWARD_STRING);
 
         assertThat(car.getForwardCount().getCount()).isEqualTo(answerForwardCount);
         assertThat(car.getForwardString().getString()).isEqualTo(answerForwardString);
     }
-
 
     static List<Map<Integer, Object>> testCaseProvider() {
         List<Map<Integer, Object>> testCases = new ArrayList<>();
