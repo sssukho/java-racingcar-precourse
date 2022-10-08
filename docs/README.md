@@ -39,7 +39,7 @@
     - `CarStatus.FORWARD` 인 경우, count += 1
     - `CarStatus.STOP` 인 경우, 아무것도 하지 않는다
 
-### 클래스#7. 전진한 횟수만큼 생성된 글자(ForwardResult) - 원시값 포장
+### 클래스#7. 전진한 횟수만큼 생성된 글자(ForwardString) - 원시값 포장
 
 - 자동차의 전진 상태(CarStatus) enum 값에 따라 아래와 같이 세팅
     - `CarStatus.FORWARD` 인 경우, "-" append
@@ -47,7 +47,7 @@
 
 ### 클래스#8. 자동차(Car)
 
-- `Name(클래스#4)`, `ForwardCount(클래스#5)`, `ForwardResult(클래스#6)` 를 멤버로 가지고 있는 클래스
+- `Name(클래스#4)`, `ForwardCount(클래스#6)`, `ForwardString(클래스#7)` 를 멤버로 가지고 있는 클래스
 - 매 라운드 마다 자동차 별로 생성된 랜덤 값에 따라 아래와 같이 세팅
     - 랜덤 값이 4 이상 9 이하인 경우 `전진 상태(CarStatus.FORWARD)` 를 ForwardCount와 ForwardString 으로 넘겨줌
     - 랜덤 값이 0 이상 3 이하인 경우 `전진 상태(CarStatus.STOP)` 를 ForwadCoudnt와 ForwardString 으로 넘겨줌
