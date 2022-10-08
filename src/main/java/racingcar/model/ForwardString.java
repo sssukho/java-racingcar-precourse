@@ -8,7 +8,9 @@ public class ForwardString {
 
     private StringBuilder string;
 
-    public ForwardString() { }
+    public ForwardString() {
+        string = new StringBuilder();
+    }
 
     public ForwardString(int carSize) {
         string = new StringBuilder(carSize + MAXIMUM_NAME_LENGTH);
