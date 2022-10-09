@@ -25,11 +25,9 @@ public class ConsoleView implements View {
     @Override
     public void printCarForwardResult(Cars cars) {
         for (Car car : cars.getCars()) {
-            System.out.print(
-                    String.format(OUTPUT_MESSAGE_FORMAT_CAR_FORWARD_RESULT,
-                            car.getName().getCarName(),
-                            car.getForwardString().getString()
-                    )
+            System.out.printf(OUTPUT_MESSAGE_FORMAT_CAR_FORWARD_RESULT,
+                    car.getName().getCarName(),
+                    car.getForwardString().getString()
             );
         }
         System.out.println();
@@ -40,7 +38,7 @@ public class ConsoleView implements View {
         System.out.print(OUTPUT_MESSAGE_FORMAT_WINNER);
         StringBuilder sb = new StringBuilder(winnerNames.size() * MAXIMUM_NAME_LENGTH);
         for (String winnerName : winnerNames) {
-            sb.append(winnerName + COMMA);
+            sb.append(winnerName).append(COMMA);
         }
         sb.deleteCharAt(sb.length() - 1);
         System.out.println(sb);
@@ -48,6 +46,6 @@ public class ConsoleView implements View {
 
     @Override
     public void printErrorMessage(String message) {
-        System.out.print(String.format(ERROR_MESSAGE_FORMAT, message));
+        System.out.printf(ERROR_MESSAGE_FORMAT, message);
     }
 }

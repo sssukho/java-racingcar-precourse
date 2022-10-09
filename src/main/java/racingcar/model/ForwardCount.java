@@ -3,7 +3,6 @@ package racingcar.model;
 import racingcar.enumeration.CarStatus;
 
 public class ForwardCount {
-
     private long count;
 
     public ForwardCount() {

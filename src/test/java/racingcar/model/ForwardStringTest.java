@@ -11,7 +11,7 @@ class ForwardStringTest {
     @Test
     void stop() {
         ForwardString fs = new ForwardString(5);
-        fs.setCountByCarStatus(CarStatus.STOP);
+        fs.setStringByCarStatus(CarStatus.STOP);
         assertThat(fs.getString()).isEqualTo("");
     }
 
@@ -19,7 +19,7 @@ class ForwardStringTest {
     @Test
     void forward() {
         ForwardString fs = new ForwardString(5);
-        fs.setCountByCarStatus(CarStatus.FORWARD);
+        fs.setStringByCarStatus(CarStatus.FORWARD);
         assertThat(fs.getString()).isEqualTo("-");
     }
 }

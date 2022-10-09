@@ -1,15 +1,13 @@
-package racingcar.model;
+package racingcar;
 
 import racingcar.controller.Controller;
 import racingcar.controller.console.ConsoleController;
 import racingcar.enumeration.GameMode;
-import racingcar.view.View;
+import racingcar.model.Round;
 import racingcar.view.console.ConsoleView;
 
 public class Container {
-
     private Controller controller;
-    private View view;
 
     public Container(GameMode mode) {
         initGameMode(mode);
@@ -22,9 +20,7 @@ public class Container {
     }
 
     private void initConsoleMode() {
-        view = new ConsoleView();
-        controller = new ConsoleController(view, new Round());
-
+        controller = new ConsoleController(new ConsoleView(), new Round());
     }
 
     public void start() {

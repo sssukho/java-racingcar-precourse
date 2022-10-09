@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Round {
-
     public void play(Cars cars, MaxForwardCount maxForwardCount) {
         for (Car car : cars.getCars()) {
             car.setForwardResultByRandomNum(new RandomNum());

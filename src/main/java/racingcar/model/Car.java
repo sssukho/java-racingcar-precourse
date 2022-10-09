@@ -1,12 +1,10 @@
 package racingcar.model;
 
-import java.util.Objects;
 import racingcar.enumeration.CarStatus;
 
 public class Car {
     public static final int FORWARD_START_INCLUSIVE = 4;
-    public static final int INT = 9;
-    public static final int FORWARD_END_INCLUSIVE = INT;
+    public static final int FORWARD_END_INCLUSIVE = 9;
     private final Name name;
     private final ForwardCount forwardCount;
     private final ForwardString forwardString;
@@ -20,11 +18,11 @@ public class Car {
     public void setForwardResultByRandomNum(RandomNum randomNum) {
         if (randomNum.getNum() >= FORWARD_START_INCLUSIVE && randomNum.getNum() <= FORWARD_END_INCLUSIVE) {
             forwardCount.setCountByCarStatus(CarStatus.FORWARD);
-            forwardString.setCountByCarStatus(CarStatus.FORWARD);
+            forwardString.setStringByCarStatus(CarStatus.FORWARD);
             return;
         }
         forwardCount.setCountByCarStatus(CarStatus.STOP);
-        forwardString.setCountByCarStatus(CarStatus.STOP);
+        forwardString.setStringByCarStatus(CarStatus.STOP);
     }
 
     public Name getName() {
@@ -37,22 +35,5 @@ public class Car {
 
     public ForwardString getForwardString() {
         return forwardString;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Car other = (Car) obj;
-        return other.name.getCarName().equals(this.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, forwardCount, forwardString);
     }
 }

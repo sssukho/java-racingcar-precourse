@@ -28,10 +28,7 @@ public class RandomNum {
     }
 
     private boolean validate(int randomNum) {
-        if (randomNum >= START_INCLUSIVE && randomNum <= END_INCLUSIVE) {
-            return true;
-        }
-        return false;
+        return randomNum >= START_INCLUSIVE && randomNum <= END_INCLUSIVE;
     }
 
     public int getNum() {

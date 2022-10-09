@@ -25,9 +25,7 @@ public class ConsoleController implements Controller {
         Cars cars = new Cars(inputCarNames());
         view.printAttemptsInputMessage();
         Attempts attempts = inputAttempts();
-
         MaxForwardCount maxForwardCount = new MaxForwardCount();
-
         view.printRoundResultMessage();
         playAsNumberOfAttempts(attempts, cars, maxForwardCount);
         view.printWinner(round.getWinnerNames(cars, maxForwardCount));
